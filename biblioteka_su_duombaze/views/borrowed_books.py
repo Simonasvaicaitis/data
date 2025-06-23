@@ -1,8 +1,7 @@
-from utilities.save_load_data import load_data
+from services.sukurti_lenteles import create_connection
 from colorama import init, Fore, Style
 
 def list_borrowed_books():
-    books = load_data()
     borrowed = False
 
     for book in books:

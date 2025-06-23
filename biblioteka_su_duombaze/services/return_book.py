@@ -1,4 +1,3 @@
-from utilities.save_load_data import load_data, save_data
 from colorama import init, Fore, Style
 
 def return_book(book_id, user_name):

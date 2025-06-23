@@ -1,7 +1,7 @@
-from utilities.save_load_data import load_data
 from datetime import datetime
 from services.orverdue import check_overdue_books
 from colorama import init, Fore, Style
+
 
 def list_overdue_books():
     overdue = check_overdue_books()

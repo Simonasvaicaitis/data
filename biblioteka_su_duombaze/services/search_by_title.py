@@ -1,4 +1,3 @@
-from utilities.save_load_data import load_data
 from colorama import init, Fore, Style
 
 def search_by_title(title):

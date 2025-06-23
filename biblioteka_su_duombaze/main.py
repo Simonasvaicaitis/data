@@ -8,11 +8,29 @@ from views.late_return_books import list_overdue_books
 from views.borrowed_books import list_borrowed_books
 from services.return_book import return_book
 from colorama import init, Fore, Style
+import sqlite3
+from services.sukurti_lenteles import sukurt_naudotojas_lentele, sukurt_paskolintos_knygos_lentele, sukurti_knygos_lentele, create_connection
 
 import pickle
 #
 # with open('data/library.pickle', 'wb') as f:
 #     pickle.dump([], f)
+
+
+db_kelias = r"D:\duombaze\data\biblioteka_su_duombaze\biblioteka.db"
+
+conn = create_connection(db_kelias)
+
+cursor = conn.cursor()
+
+
+sukurti_knygos_lentele(conn)
+sukurt_naudotojas_lentele(conn)
+sukurt_paskolintos_knygos_lentele(conn)
+
+
+
+
 
 def main():
     init(autoreset=True)

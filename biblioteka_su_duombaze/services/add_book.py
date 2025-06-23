@@ -1,4 +1,3 @@
-from utilities.save_load_data import load_data, save_data
 from classes.inventory import Inventory
 from colorama import init, Fore, Style
 
